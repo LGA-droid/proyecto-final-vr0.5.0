@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Divina</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Aura Divina Logo">
+                </a>
+            </div>
+            <ul id="ulmenu" class="nav-links"></ul>
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Icono de hamburguesa -->
+            </div>
+            <div id="icono-carrito">
+                <img src="carrito.png.png" alt="Carrito" />
+                <span id="cantidad-carrito" class="cantidad-carrito">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Formulario de Pago</h2>
+        <form id="formPago">
+            <label for="nombre">Nombre completo:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="direccion">Dirección:</label><br>
+            <input type="text" id="direccion" name="direccion" required><br><br>
+
+            <label for="tarjeta">Número de tarjeta:</label><br>
+            <input type="text" id="tarjeta" name="tarjeta" maxlength="16" required pattern="\d{16}" placeholder="1234 5678 9012 3456"><br><br>
+
+            <label for="fecha-vencimiento">Fecha de vencimiento (MM/AA):</label><br>
+            <input type="text" id="fecha-vencimiento" name="fecha-vencimiento" required pattern="(0[1-9]|1[0-2])\/\d{2}" placeholder="MM/AA"><br><br>
+
+            <label for="cvv">Código CVV:</label><br>
+            <input type="text" id="cvv" name="cvv" maxlength="3" required pattern="\d{3}" placeholder="123"><br><br>
+
+            <button type="submit">Pagar</button>
+        </form>
+    </main>
+
+    <script src="carrito.js"></script>
+
+    <footer class="footer">
+        <p>&copy; 2024 Aura Divina. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
